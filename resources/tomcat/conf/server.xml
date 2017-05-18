@@ -46,7 +46,11 @@
         <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
                resourceName="UserDatabase"/>
       </Realm>
-
+            <Host name='localhost'
+                  failCtxIfServletStartFails='true'>
+                <Listener className='com.gopivotal.cloudfoundry.tomcat.lifecycle.ApplicationStartupFailureDetectingLifecycleListener'/>
+		<Valve className="org.kie.integration.tomcat.JACCValve"/>
+            </Host>
 
         </Engine>
     </Service>
