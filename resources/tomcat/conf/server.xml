@@ -47,7 +47,7 @@
                resourceName="UserDatabase"/>
       </Realm>
             <Host name='localhost'
-                  failCtxIfServletStartFails='true' privileged='true'>
+                  failCtxIfServletStartFails='true'>
                 <Listener className='com.gopivotal.cloudfoundry.tomcat.lifecycle.ApplicationStartupFailureDetectingLifecycleListener'/>
 		<Valve className="org.kie.integration.tomcat.JACCValve"/>
             </Host>
